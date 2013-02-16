@@ -80,21 +80,5 @@ namespace RomanNumerals
 
             return romanNumeral;
         }
-
-        public int PlaceValue
-        {
-            get
-            {
-                return _placeValue;
-            }
-        }
-
-        public int Value
-        {
-            get
-            {
-                return _value;
-            }
-        }
     }
 }

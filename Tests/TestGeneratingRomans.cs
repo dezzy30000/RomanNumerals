@@ -42,42 +42,6 @@ namespace RomanNumerals.Tests
             }
         }
 
-        [Test]
-        public void ConvertNumber1903ToDigits()
-        {
-            var digitsGenerator = new DigitsGenerator();
-            var digits = digitsGenerator.Generate(1903);
-
-            var actual = digits
-                .Select(digit => digit.Value)
-                .ToArray();
-
-            var expected = new int[] { 1, 9, 0, 3 };
-
-            for (int index = 0; index < digits.Length; index++)
-            {
-                Assert.AreEqual(expected[index], actual[index]);
-            }
-        }
-
-        [Test]
-        public void DeterminePlaceValueForNumber1903ThatRepresentThousandsHundredsTensAndUnits()
-        {
-            var digitsGenerator = new DigitsGenerator();
-            var digits = digitsGenerator.Generate(1903);
-
-            var actual = digits
-                .Select(digit => digit.PlaceValue)
-                .ToArray();
-
-            var expected = new int[] { 1000, 100, 10, 1 };
-
-            for (int index = 0; index < digits.Length; index++)
-            {
-                Assert.AreEqual(expected[index], actual[index]);
-            }
-        }
-
         [TestCase('1', "M")]
         [TestCase('2', "MM")]
         [TestCase('3', "MMM")]
